@@ -1,0 +1,39 @@
+<h1>DarkknightGaming</h1>
+<p>Find me in app/views/darkknight_gaming/index.html.erb</p>
+
+<p>A game is a structured form of play, usually undertaken for entertainment or fun, and sometimes used as an educational tool.[1] Many games are also considered to be work (such as professional players of spectator sports or games) or art (such as jigsaw puzzles or games involving an artistic layout such as Mahjong, solitaire, or some video games).
+
+Key components of games are goals, rules, challenge, and interaction. Games generally involve mental or physical stimulation, and often both. Many games help develop practical skills, serve as a form of exercise, or otherwise perform an educational, simulational, or psychological role. </p>
+
+<h2>Game</h2>
+<ul>
+    <% @game.each do |game| %>
+        <li>
+            <%= game.title %>
+            
+        </li>
+        <br>
+        <li>
+            <%= game.body %>
+        </li>
+        <br>
+    <% end %>
+</ul>
+
+
+<h1>Game page</h1>
+
+<ul>
+  <% @game.each do |game| %>
+    <li>
+      <a href="/darkknight_gaming/<%= game.id %>">
+        <%= game.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<h2>For pc games click below link</h2>
+<a href="https://www.pcmag.com/picks/the-best-pc-games">PC Games</a>
+<h2>For mobile games click below link</h2>
+<a href="https://www.pockettactics.com/best-mobile-games">Mobile Games</a>
